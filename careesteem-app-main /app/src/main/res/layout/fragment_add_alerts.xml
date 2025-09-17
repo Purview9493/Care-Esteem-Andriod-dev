@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2025 ANALOGUE IT SOLUTIONS. All rights reserved.
+  ~ Use of this source code is governed by a MIT-style license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.alerts.view.AddAlertsFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_alert"
+            android:drawablePadding="8dip"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="@string/raise_an_alert"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="@string/clients_ran"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/clientName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/ic_edittext_light_bg"
+            android:drawableEnd="@drawable/round_arrow_down"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="center_vertical"
+            android:hint="Select"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvClientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_spinner_dropdown_light"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12ssp"
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="@string/visits_ran"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/visitName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/ic_edittext_light_bg"
+            android:drawableEnd="@drawable/round_arrow_down"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="center_vertical"
+            android:hint="Select"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVisitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_spinner_dropdown_light"
+            android:maxHeight="200dp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="@string/severity_of_concern_ran"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/severityOfConcern"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:background="@drawable/ic_edittext_light_bg"
+            android:drawableEnd="@drawable/round_arrow_down"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="center_vertical"
+            android:hint="Select"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConcern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_spinner_dropdown_light"
+            android:maxHeight="200dp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="@string/concern_details_ran"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/visitNotes"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scrollbars="vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:inputType="textMultiLine"
+            android:background="@drawable/ic_edittext_light_bg"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="left|top"
+            android:hint="Enter Notes"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:fontFamily="@font/robotoslab_regular"
+            android:text="Body Maps"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/bmDisable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/robotoslab_regular"
+                android:text="Disable"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/bmEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoslab_regular"
+                android:text="Enable"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="normal"
+
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/bodyMapController"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_body_map_section_bg"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:shapeAppearanceOverlay="@style/TopCornerShape"
+                    app:strokeColor="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/bodyLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:paddingRight="@dimen/_13sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bodyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                            android:fontFamily="@font/robotoslab_regular"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:tag="Invisible"
+                            android:text="Body"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/white"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/bodyItemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/bodyFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutBodyFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/_13sdp"
+                            android:paddingRight="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Body Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/bodyBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutBodyBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/_13sdp"
+                            android:paddingRight="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Body Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/ic_body_map_section_bg"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:shapeAppearanceOverlay="@style/TopCornerShape"
+                    app:strokeColor="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/faceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_13sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/faceName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                            android:fontFamily="@font/robotoslab_regular"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:tag="Invisible"
+                            android:text="Face"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/white"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/faceItemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/faceFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutFaceFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Face Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/faceBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutFaceBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Face Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/ic_body_map_section_bg"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:shapeAppearanceOverlay="@style/TopCornerShape"
+                    app:strokeColor="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/handLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_13sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/handName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                            android:fontFamily="@font/robotoslab_regular"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:tag="Invisible"
+                            android:text="Hand"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/white"
+
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/handItemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rightFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutRightFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Right Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rightBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutRightBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Right Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/leftFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutLeftFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Left Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/leftBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutLeftBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Left Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/ic_body_map_section_bg"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:shapeAppearanceOverlay="@style/TopCornerShape"
+                    app:strokeColor="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/pelvisLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_13sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/pelvisName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                            android:fontFamily="@font/robotoslab_regular"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:tag="Invisible"
+                            android:text="Pelvis"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/white"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/pelvisItemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/pelvisFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutPelvisFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/_13sdp"
+                            android:paddingRight="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Pelvis Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/pelvisBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutPelvisBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/_13sdp"
+                            android:paddingRight="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Pelvis Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/ic_body_map_section_bg"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:shapeAppearanceOverlay="@style/TopCornerShape"
+                    app:strokeColor="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/feetLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_13sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/feetName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                            android:fontFamily="@font/robotoslab_regular"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:tag="Invisible"
+                            android:text="Feet"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/white"
+
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/feetItemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rightFrontFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutRightFrontFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Right Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rightBackFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutRightBackFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp"
+                            tools:ignore="TooManyViews">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Right Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rightHeelFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutRightHeelFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp"
+                            tools:ignore="TooManyViews">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Right Heel"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/leftFrontFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutLeftFrontFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp"
+                            tools:ignore="TooManyViews">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Left Front"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/leftBackFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutLeftBackFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp"
+                            tools:ignore="TooManyViews">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Left Back"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/leftHeelFeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/layoutLeftHeelFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_13sdp"
+                            android:paddingEnd="@dimen/_13sdp"
+                            tools:ignore="TooManyViews">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="Left Heel"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="normal"
+
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/ic_icons_plus_primary" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_cancel_btn_bg"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Space
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_save_btn_bg"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2025 ANALOGUE IT SOLUTIONS. All rights reserved.
+  ~ Use of this source code is governed by a MIT-style license that can be
+  ~ found in the LICENSE file.
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.aits.careesteem.view.auth.viewmodel.WelcomeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".view.auth.view.WelcomeFragment">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgTopLogo"
+                android:layout_width="@dimen/_66sdp"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:src="@drawable/app_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textSize="@dimen/_26ssp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="@string/please_sign_in_to_continue"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_22sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/group_mobile_prefix" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/robotoslab_regular"
+                        android:letterSpacing="0"
+                        android:text="@string/enter_mobile_number"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="normal" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llMobileEntry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/ic_edittext_bg"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="0.7"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_down_small"
+                        android:drawablePadding="2dip"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/robotoslab_regular"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        app:drawableTint="@color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <EditText
+                        android:id="@+id/et_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="0.3"
+                        android:autofillHints="phone"
+                        android:background="@null"
+                        android:fontFamily="@font/robotoslab_regular"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:onTextChanged="@{(s, start, before, count) -> viewModel.setPhoneNumber(s, start, before, count)}"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@{viewModel.phoneNumber}"
+                        android:textColorHint="@android:color/background_light"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCountryList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_country_spinner_dropdown"
+                    android:maxHeight="200dp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/robotoslab_regular"
+                    android:text="@{viewModel.phoneNumberError}"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/_133sdp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="@{viewModel.isPhoneNumberValid}"
+                    android:fontFamily="@font/robotoslab_regular"
+                    android:letterSpacing="0"
+                    android:onClick="@{() -> viewModel.onButtonClicked()}"
+                    android:text="@string/request_otp"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="normal" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginRight="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/layer_welcome_bottom" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

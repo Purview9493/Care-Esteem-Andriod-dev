@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.visits.view.MapCheckInFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tabLayout"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            app:cardElevation="@dimen/_5sdp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="center"
+            android:text="@string/check_in"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:icon="@drawable/ic_sharp_timer"
+            app:iconTintMode="multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/robotoslab_regular"
+            android:gravity="center"
+            android:text="@string/check_out"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:icon="@drawable/ic_sharp_timer"
+            app:iconTintMode="multiply" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2025 ANALOGUE IT SOLUTIONS. All rights reserved.
+  ~ Use of this source code is governed by a MIT-style license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_24sdp"
+    android:layout_height="@dimen/_44sdp"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:background="@drawable/ic_day_unselect_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/dayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoslab_regular"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:text="Dasds"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_9ssp" />
+
+    <TextView
+        android:id="@+id/dayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/robotoslab_regular"
+        android:maxLength="2"
+        android:text="15"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_9ssp" />
+</LinearLayout>

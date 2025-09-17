@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Care Esteem</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="todo" translatable="false">TODO</string>
+    <string name="notification_channel_id" translatable="false">care_esteem_channel</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome!</string>
+    <string name="please_sign_in_to_continue">Sign in to continue</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_your_mobile_number">Enter your Mobile Number</string>
+    <string name="request_otp">Request OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_has_sent_to">OTP has sent to</string>
+    <string name="successfully">Successfully</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="didn_t_received_the_otp">Didn’t received the OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="visits">Visits</string>
+    <string name="clients">Clients</string>
+    <string name="alerts">Alerts</string>
+    <string name="list_of_clients">List of Clients</string>
+    <string name="list_of_agencies">List of Companies</string>
+    <string name="create_an_unscheduled_visit">Create an Unscheduled Visit</string>
+    <string name="raise_an_alert">Raise an Alert</string>
+    <string name="create_an_alert">Create an Alert</string>
+    <string name="notifications">Notifications</string>
+    <string name="you_will_be_notified_if_there_are_any_changes_to_your_schedule">You will be <font color="#279989">notified</font> if there are any changes to your <font color="#279989">schedule</font>.</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="check_in">Check in</string>
+    <string name="check_out">Check out</string>
+    <string name="check_in_time">Check in time</string>
+    <string name="check_out_time">Check out time</string>
+    <string name="submitted">Submitted :</string>
+    <string name="completed">Completed :</string>
+    <string name="essentials">Essentials :</string>
+    <string name="list_of_todo_s">List of To-Do Notes</string>
+    <string name="list_of_medications">List of Medication Notes</string>
+    <string name="list_of_submitted_medications">List of Submitted Medications</string>
+    <string name="scheduled_medication">Scheduled Medication</string>
+    <string name="list_of_visit_notes">List of Visit Notes</string>
+    <string name="no_todos">There are currently no To-do\'s assigned for this visit.</string>
+    <string name="no_todo">To-do\'s are not assigned for unscheduled visits.</string>
+    <string name="no_medications">There are currently no Medications assigned for this visit.</string>
+    <string name="no_medication">Medications are not assigned for unscheduled visits.</string>
+    <string name="no_visit_notes">No Notes Added Yet.\nLooks like there aren\'t any notes for this visit just yet.</string>
+    <string name="add_note">Add Note</string>
+    <string name="name">Name</string>
+    <string name="agency">Company</string>
+    <string name="age">Age</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="post_code">Post Code</string>
+    <string name="developed_by">Developed by</string>
+    <string name="care_esteem_ltd">Care Esteem LTD</string>
+    <string name="logout">Logout</string>
+    <string name="switch_account">Switch Account</string>
+    <string name="enter_passcode">Enter Passcode</string>
+    <string name="enter_your_6_digit_passcode_to_log_in">Enter your 4-digit passcode to log in</string>
+    <string name="setup_passcode">Setup Passcode</string>
+    <string name="setup_your_6_digit_passcode_to_log_in">Setup your 4-digit passcode to log in</string>
+    <string name="confirm_passcode">Confirm Passcode</string>
+    <string name="confirm_your_6_digit_passcode_to_log_in">Confirm your 4-digit passcode to log in</string>
+    <string name="ongoing_visits">Ongoing Visits</string>
+    <string name="upcoming_visits">Upcoming Visits</string>
+    <string name="completed_visits">Completed Visits</string>
+    <string name="not_completed_visits">Not Completed Visits</string>
+    <string name="not_completed">Not Completed</string>
+    <string name="planned_start_time">Planned Start Time</string>
+    <string name="planned_end_time">Planned End Time</string>
+    <string name="visit_notes">Visit Notes</string>
+    <string name="my_care_network">My Care Network</string>
+    <string name="care_plan">Care Plan</string>
+    <string name="activity_assessment">Activity Assessment</string>
+    <string name="activity_risk_assessment">Activity Risk Assessment</string>
+    <string name="behaviour_assessment">Behaviour Assessment</string>
+    <string name="behaviour_risk_assessment">Behaviour Risk Assessment</string>
+    <string name="self_administration_risk_assessment">Self Administration Risk Assessment</string>
+    <string name="medication_risk_assessment">Medication Risk Assessment</string>
+    <string name="equipment_register">Equipment Register</string>
+    <string name="financial_risk_assessment">Financial Risk Assessment</string>
+    <string name="coshh_risk_assessment">COSHH Risk Assessment</string>
+    <string name="list_of_prn_medication">PRN Medication</string>
+    <string name="breathing_assessment">Breathing Assessment</string>
+    <string name="clinical_assessment">Clinical Assessment</string>
+    <string name="communication_assessment">Communication Assessment</string>
+    <string name="continence_assessment">Continence Assessment</string>
+    <string name="cultural_spiritual_amp_social_relationships_assessment"><![CDATA[Cultural, Spiritual & Social Relationships Assessment]]></string>
+    <string name="domestic_assessment">Domestic Assessment</string>
+    <string name="environment_assessment">Environment Assessment</string>
+    <string name="equipment_assessment">Equipment Assessment</string>
+    <string name="financial_assessment">Financial Assessment</string>
+    <string name="medication_assessment">Medication Assessment</string>
+    <string name="mental_health_assessment">Mental Health Assessment</string>
+    <string name="moving_amp_handling_assessment"><![CDATA[Moving & Handling Assessment]]></string>
+    <string name="nutrition_amp_hydration_assessment"><![CDATA[Nutrition & Hydration Assessment]]></string>
+    <string name="oral_care_assessment">Oral Care Assessment</string>
+    <string name="personal_hygiene_assessment">Personal Hygiene Assessment</string>
+    <string name="pain_assessment">Pain Assessment</string>
+    <string name="skin_assessment">Skin Assessment</string>
+    <string name="sleeping_assessment">Sleeping Assessment</string>
+    <string name="select_your_agency">Select your Company</string>
+    <string name="view">View</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="clear_all">Clear All</string>
+    <string name="loading">Loading</string>
+    <string name="clients_ran">Clients <font color="#279989">*</font></string>
+    <string name="visits_ran">Visits <font color="#279989">*</font></string>
+    <string name="severity_of_concern_ran">Severity of Concern <font color="#279989">*</font></string>
+    <string name="concern_details_ran">Notes <font color="#279989">*</font></string>
+</resources>

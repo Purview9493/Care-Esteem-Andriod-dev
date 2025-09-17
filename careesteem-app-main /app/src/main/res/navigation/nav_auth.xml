@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2025 ANALOGUE IT SOLUTIONS. All rights reserved.
+  ~ Use of this source code is governed by a MIT-style license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth.xml"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.aits.careesteem.view.auth.view.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.aits.careesteem.view.auth.view.VerifyOtpFragment"
+        android:label="fragment_verify_otp"
+        tools:layout="@layout/fragment_verify_otp">
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_selectAgencyFragment"
+            app:destination="@id/selectAgencyFragment" />
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_setupPasscodeFragment"
+            app:destination="@id/setupPasscodeFragment" />
+        <argument
+            android:name="mobileNo"
+            app:argType="string" />
+        <argument
+            android:name="countryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_webViewFragment2"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preloaderFragment"
+        android:name="com.aits.careesteem.view.auth.view.PreloaderFragment"
+        android:label="fragment_preloader"
+        tools:layout="@layout/fragment_preloader" />
+    <fragment
+        android:id="@+id/enterPasscodeFragment"
+        android:name="com.aits.careesteem.view.auth.view.EnterPasscodeFragment"
+        android:label="fragment_enter_passcode"
+        tools:layout="@layout/fragment_enter_passcode" />
+    <fragment
+        android:id="@+id/setupPasscodeFragment"
+        android:name="com.aits.careesteem.view.auth.view.SetupPasscodeFragment"
+        android:label="fragment_setup_passcode"
+        tools:layout="@layout/fragment_setup_passcode">
+        <argument
+            android:name="response"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_setupPasscodeFragment_to_confirmPasscodeFragment"
+            app:destination="@id/confirmPasscodeFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPasscodeFragment"
+        android:name="com.aits.careesteem.view.auth.view.ConfirmPasscodeFragment"
+        android:label="fragment_confirm_passcode"
+        tools:layout="@layout/fragment_confirm_passcode">
+        <argument
+            android:name="response"
+            app:argType="string" />
+        <argument
+            android:name="passcode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAgencyFragment"
+        android:name="com.aits.careesteem.view.auth.view.SelectAgencyFragment"
+        android:label="SelectAgencyFragment"
+        tools:layout="@layout/fragment_select_agency">
+        <argument
+            android:name="response"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_selectAgencyFragment_to_setupPasscodeFragment"
+            app:destination="@id/setupPasscodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.aits.careesteem.view.webview.view.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="fileUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>

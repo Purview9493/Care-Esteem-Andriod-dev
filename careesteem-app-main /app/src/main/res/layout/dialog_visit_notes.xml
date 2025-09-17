@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2025 ANALOGUE IT SOLUTIONS. All rights reserved.
+  ~ Use of this source code is governed by a MIT-style license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet_rounded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_12sdp"
+        android:paddingRight="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_11sdp">
+
+            <TextView
+                android:id="@+id/tvTopHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="Visit Notes"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/cross"
+                android:tint="#4C5664" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_marginBottom="@dimen/_11sdp"
+            android:background="#E0E0E0" />
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tvBelowHeading"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:fontFamily="@font/robotoslab_regular"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="Visit Notes"-->
+<!--                    android:textSize="@dimen/_10ssp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:ignore="HardcodedText" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                    android:id="@+id/visitNotes"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:background="@drawable/ic_todo_dialog_edittext_bg"-->
+<!--                    android:fontFamily="@font/robotoslab_regular"-->
+<!--                    android:gravity="left|top"-->
+<!--                    android:hint="Enter visit notes"-->
+<!--                    android:minLines="30"-->
+<!--                    android:padding="@dimen/_10sdp"-->
+<!--                    android:textSize="@dimen/_10ssp"-->
+<!--                    android:textStyle="normal"-->
+<!--                    tools:ignore="HardcodedText,RtlHardcoded" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                android:id="@+id/tvBelowHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center_vertical"
+                android:text="Visit Notes"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/visitNotes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/ic_todo_dialog_edittext_bg"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="left|top"
+                android:hint="Enter visit notes"
+                android:inputType="text|textMultiLine|textLongMessage"
+                android:scrollbars="vertical"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal"
+                tools:ignore="HardcodedText,NestedWeights,RtlHardcoded" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_cancel_btn_bg"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <Space
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_save_btn_bg"
+                android:fontFamily="@font/robotoslab_regular"
+                android:gravity="center"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
