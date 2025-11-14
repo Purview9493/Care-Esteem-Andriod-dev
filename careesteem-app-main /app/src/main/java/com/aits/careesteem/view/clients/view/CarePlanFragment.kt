@@ -71,33 +71,58 @@ class CarePlanFragment : Fragment() {
         _binding = null
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (isVisible) {
-            viewModel.getClientCarePlanAss(requireActivity(), clientData.id.toString())
-            viewModel.getClientCarePlanRiskAss(requireActivity(), clientData.id)
-        }
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        if (isVisible) {
+//            viewModel.getClientCarePlanAss(requireActivity(), clientData.id.toString())
+//            viewModel.getClientCarePlanRiskAss(requireActivity(), clientData.id)
+//        }
+//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentCarePlanBinding.inflate(inflater, container, false)
         setupAdapter()
         setupViewModel()
-        return binding.root
+
+        // API call only once
+        viewModel.getClientCarePlanAss(requireActivity(), clientData.id.toString())
+        viewModel.getClientCarePlanRiskAss(requireActivity(), clientData.id)
     }
 
-    private fun setupAdapter() {
-        adapter = RiskAssessmentParentAdapter(requireContext(), mutableListOf(), clientData)
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerView.adapter = adapter
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        _binding = FragmentCarePlanBinding.inflate(inflater, container, false)
+//        setupAdapter()
+//        setupViewModel()
+//        return binding.root
+//    }
+override fun onCreateView(
+    inflater: LayoutInflater, container: ViewGroup?,
+    savedInstanceState: Bundle?
+): View {
+    _binding = FragmentCarePlanBinding.inflate(inflater, container, false)
+    return binding.root
+}
+//    private fun setupAdapter() {
+//        adapter = RiskAssessmentParentAdapter(requireContext(), mutableListOf(), clientData)
+//        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        binding.recyclerView.adapter = adapter
+//
+//        questionAnswerAdapter = QuestionAnswerAdapter()
+//        binding.rvAssessment.layoutManager = LinearLayoutManager(requireContext())
+//        binding.rvAssessment.adapter = questionAnswerAdapter
+//    }
+private fun setupAdapter() {
+    adapter = RiskAssessmentParentAdapter(requireContext(), mutableListOf(), clientData)
+    binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+    binding.recyclerView.adapter = adapter
 
-        questionAnswerAdapter = QuestionAnswerAdapter()
-        binding.rvAssessment.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvAssessment.adapter = questionAnswerAdapter
-    }
+    questionAnswerAdapter = QuestionAnswerAdapter()
+    binding.rvAssessment.layoutManager = LinearLayoutManager(requireContext())
+    binding.rvAssessment.adapter = questionAnswerAdapter
+}
 
     private fun setupViewModel() {
         // Observe loading state
@@ -389,6 +414,37 @@ class CarePlanFragment : Fragment() {
                 if (filteredList.isNotEmpty()) {
                     showAssessmentQuestionAndAnswer(
                         "Nutrition & Hydration Assessment",
+                        filteredList
+                    )
+                    showIfAnyAssessmentVisible()
+                }
+            }
+        }
+        viewModel.mentalCapacityAssessmentData.observe(viewLifecycleOwner) { data ->
+            if (data != null && data.consent) {
+                val filteredList =
+                    FilterQuestionAndAnswers.filterQuestionsAndAnswersMentalCapacityAssessmentData(
+                        clientData,
+                        data
+                    )
+                if (filteredList.isNotEmpty()) { showAssessmentQuestionAndAnswer(
+                    "Mental Capacity Assessment",
+                        filteredList
+                    )
+                    showIfAnyAssessmentVisible()
+                }
+            }
+        }
+        viewModel.meetingAssessmentData.observe(viewLifecycleOwner) { data ->
+            if (data != null && data.consent) {
+                val filteredList =
+                    FilterQuestionAndAnswers.filterQuestionsAndAnswersMeetingAssessmentData(
+                        clientData,
+                        data
+                    )
+                if (filteredList.isNotEmpty()) {
+                    showAssessmentQuestionAndAnswer(
+                        "Meeting Assessment",
                         filteredList
                     )
                     showIfAnyAssessmentVisible()

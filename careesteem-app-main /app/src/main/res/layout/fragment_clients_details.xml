@@ -1223,6 +1223,87 @@
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mentalCapacityAssessment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/mentalCapacityAssessmentLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="@string/mental_capacity_assessment"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:src="@drawable/ic_export" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/meetingAssessment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="#E9F9F7"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="#E9F9F7"
+                        app:strokeWidth="1dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/meetingAssessmentLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/robotoslab_regular"
+                                android:singleLine="true"
+                                android:text="@string/meeting_assessment"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:src="@drawable/ic_export" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/sleepingAssessment"

@@ -95,6 +95,8 @@
     <string name="mental_health_assessment">Mental Health Assessment</string>
     <string name="moving_amp_handling_assessment"><![CDATA[Moving & Handling Assessment]]></string>
     <string name="nutrition_amp_hydration_assessment"><![CDATA[Nutrition & Hydration Assessment]]></string>
+    <string name="mental_capacity_assessment">Mental Capacity Assessment</string>
+    <string name="meeting_assessment">Meeting Assessment</string>
     <string name="oral_care_assessment">Oral Care Assessment</string>
     <string name="personal_hygiene_assessment">Personal Hygiene Assessment</string>
     <string name="pain_assessment">Pain Assessment</string>

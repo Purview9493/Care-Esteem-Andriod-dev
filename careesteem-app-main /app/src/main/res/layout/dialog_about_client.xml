@@ -66,7 +66,6 @@
                     android:text="Date of Birth"
                     android:textSize="@dimen/_11ssp"
                     android:textStyle="normal"
-
                     tools:ignore="HardcodedText" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -78,7 +77,6 @@
                     android:text=":"
                     android:textSize="@dimen/_11ssp"
                     android:textStyle="normal"
-
                     tools:ignore="HardcodedText" />
 
                 <androidx.appcompat.widget.AppCompatTextView

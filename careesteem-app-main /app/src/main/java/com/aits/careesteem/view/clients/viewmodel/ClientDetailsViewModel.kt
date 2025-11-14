@@ -130,6 +130,17 @@ class ClientDetailsViewModel @Inject constructor(
         MutableLiveData<ClientCarePlanAssessment.Data.NutritionHydrationAssessmentData>()
     val nutritionHydrationAssessmentData: LiveData<ClientCarePlanAssessment.Data.NutritionHydrationAssessmentData> get() = _nutritionHydrationAssessmentData
 
+    private val  _mentalCapacityAssessmentData =
+        MutableLiveData<ClientCarePlanAssessment.Data.MentalCapacityAssessmentData>()
+
+    val mentalCapacityAssessmentData: LiveData<ClientCarePlanAssessment.Data.MentalCapacityAssessmentData> get() = _mentalCapacityAssessmentData
+
+    private val  _meetingAssessmentData =
+        MutableLiveData<ClientCarePlanAssessment.Data.MeetingAssessmentData>()
+
+    val meetingAssessmentData: LiveData<ClientCarePlanAssessment.Data.MeetingAssessmentData> get() = _meetingAssessmentData
+
+
     // Risk Assessment List
     private val _activityRiskAssessmentData =
         MutableLiveData<List<CarePlanRiskAssList.Data.ActivityRiskAssessmentData>>()
@@ -258,6 +269,8 @@ class ClientDetailsViewModel @Inject constructor(
                         _skinAssessmentData.value = list.data[0].SkinAssessment
                         _nutritionHydrationAssessmentData.value =
                             list.data[0].NutritionHydrationAssessment
+                        _mentalCapacityAssessmentData.value = list.data[0].MentalCapacityAssessment
+                        _meetingAssessmentData.value = list.data[0].MeetingAssessment
                     }
                 } else {
                     errorHandler.handleErrorResponse(response, activity)

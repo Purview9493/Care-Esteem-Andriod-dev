@@ -680,6 +680,7 @@ object FilterQuestionAndAnswers {
         return filteredList
     }
 
+
     fun filterQuestionsAndAnswersNutritionHydrationAssessmentData(
         clientData: ClientsList.Data,
         data: ClientCarePlanAssessment.Data.NutritionHydrationAssessmentData
@@ -689,6 +690,74 @@ object FilterQuestionAndAnswers {
         // Get all properties dynamically
         val properties =
             ClientCarePlanAssessment.Data.NutritionHydrationAssessmentData::class.memberProperties.associateBy { it.name }
+
+        // Iterate through questions dynamically
+        properties.filterKeys { it.startsWith("questions_name_") }
+            .forEach { (questionKey, questionProperty) ->
+                val index =
+                    questionKey.removePrefix("questions_name_") // Extract index (e.g., "1", "2", "3")
+                val statusProperty =
+                    properties["status_$index"] // Find corresponding status property
+                val commentProperty =
+                    properties["comment_$index"] // Find corresponding status property
+
+                var question = questionProperty.get(data) as? String ?: "N/A"
+                val status = statusProperty?.get(data) as? String ?: "N/A"
+                val comment = commentProperty?.get(data) as? String ?: "N/A"
+
+                // Replace "<name>" dynamically
+                question = question.replace("<name>", clientData.full_name)
+
+                //if (status.isNotEmpty()) {
+                filteredList.add(Triple(question, status, comment))
+                //}
+            }
+
+        return filteredList
+    }
+    fun filterQuestionsAndAnswersMentalCapacityAssessmentData(
+        clientData: ClientsList.Data,
+        data: ClientCarePlanAssessment.Data.MentalCapacityAssessmentData
+    ): List<Triple<String, String, String>> {
+        val filteredList = mutableListOf<Triple<String, String, String>>()
+
+        // Get all properties dynamically
+        val properties =
+            ClientCarePlanAssessment.Data.MentalCapacityAssessmentData::class.memberProperties.associateBy { it.name }
+
+        // Iterate through questions dynamically
+        properties.filterKeys { it.startsWith("questions_name_") }
+            .forEach { (questionKey, questionProperty) ->
+                val index =
+                    questionKey.removePrefix("questions_name_") // Extract index (e.g., "1", "2", "3")
+                val statusProperty =
+                    properties["status_$index"] // Find corresponding status property
+                val commentProperty =
+                    properties["comment_$index"] // Find corresponding status property
+
+                var question = questionProperty.get(data) as? String ?: "N/A"
+                val status = statusProperty?.get(data) as? String ?: "N/A"
+                val comment = commentProperty?.get(data) as? String ?: "N/A"
+
+                // Replace "<name>" dynamically
+                question = question.replace("<name>", clientData.full_name)
+
+                //if (status.isNotEmpty()) {
+                filteredList.add(Triple(question, status, comment))
+                //}
+            }
+
+        return filteredList
+    }
+    fun filterQuestionsAndAnswersMeetingAssessmentData(
+        clientData: ClientsList.Data,
+        data: ClientCarePlanAssessment.Data.MeetingAssessmentData
+    ): List<Triple<String, String, String>> {
+        val filteredList = mutableListOf<Triple<String, String, String>>()
+
+        // Get all properties dynamically
+        val properties =
+            ClientCarePlanAssessment.Data.MeetingAssessmentData::class.memberProperties.associateBy { it.name }
 
         // Iterate through questions dynamically
         properties.filterKeys { it.startsWith("questions_name_") }

@@ -31,7 +31,9 @@ data class ClientCarePlanAssessment(
         val PainAssessment: PainAssessmentData,
         val PersonalHygieneAssessment: PersonalHygieneAssessmentData,
         val SkinAssessment: SkinAssessmentData,
-        val SleepingAssessment: SleepingAssessmentData
+        val SleepingAssessment: SleepingAssessmentData,
+        val MentalCapacityAssessment: MentalCapacityAssessmentData,
+        val MeetingAssessment: MeetingAssessmentData
     ) {
         data class ActivityAssessmentData(
             val close_date: String,
@@ -510,6 +512,48 @@ data class ClientCarePlanAssessment(
             val status_133: String,
             val status_134: String,
             val status_135: String
+        )
+        data class MentalCapacityAssessmentData(
+            val close_date: String,
+            val comment_137: String,
+            val comment_138: String,
+            val comment_139: String,
+            val comment_140: String,
+            val comment_141: String,
+            val comment_142: String,
+            val consent: Boolean,
+            val questions_name_1: String,
+            val questions_name_2: String,
+            val questions_name_3: String,
+            val questions_name_4: String,
+            val questions_name_5: String,
+            val questions_name_6: String,
+            val status_137: String,
+            val status_138: String,
+            val status_139: String,
+            val status_140: String,
+            val status_141: String
+        )
+        data class MeetingAssessmentData(
+            val close_date: String,
+            val comment_143: String,
+            val comment_144: String,
+            val comment_145: String,
+            val comment_146: String,
+            val comment_147: String,
+            val comment_148: String,
+            val consent: Boolean,
+            val questions_name_1: String,
+            val questions_name_2: String,
+            val questions_name_3: String,
+            val questions_name_4: String,
+            val questions_name_5: String,
+            val questions_name_6: String,
+            val status_143: String,
+            val status_144: String,
+            val status_145: String,
+            val status_146: String,
+            val status_147: String
         )
     }
 }

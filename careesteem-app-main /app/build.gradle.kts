@@ -111,6 +111,8 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.play.services.auth.api.phone)
     implementation(libs.play.services.vision.common)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // Testing dependencies
     testImplementation(libs.junit)
